@@ -1,0 +1,658 @@
+/* ================================
+   TRADESPHERE MANAGEMENT SYSTEM
+   LANDING PAGE STYLE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f7f3;
+    color: #263238;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.navbar {
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #263238;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #6b8e6b;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #455a64;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6b8e6b;
+}
+
+.login-btn {
+    border: none;
+    background: #6b8e6b;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #4f704f;
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 650px;
+    padding: 80px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background:
+        linear-gradient(
+            135deg,
+            #f8f7f3 0%,
+            #edf3ed 100%
+        );
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.small-title {
+    color: #6b8e6b;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #263238;
+}
+
+.hero h1 span {
+    display: block;
+    color: #6b8e6b;
+}
+
+.description {
+    font-size: 18px;
+    color: #607078;
+    margin-bottom: 30px;
+    max-width: 570px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.primary-btn {
+    border: none;
+    background: #6b8e6b;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: #4f704f;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    text-decoration: none;
+    color: #52656d;
+    padding: 13px 24px;
+    border: 1px solid #aab8ae;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    background: white;
+    border-color: #6b8e6b;
+}
+
+
+/* ================================
+   DASHBOARD PREVIEW
+================================ */
+
+.dashboard-preview {
+    width: 500px;
+    min-height: 370px;
+    padding: 25px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 20px 50px rgba(38, 50, 56, 0.12);
+    border: 1px solid #e2e8e2;
+}
+
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+.online {
+    font-size: 13px;
+    color: #6b8e6b;
+    font-weight: bold;
+}
+
+.preview-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.preview-card {
+    padding: 18px 12px;
+    background: #f2f6f2;
+    border-radius: 12px;
+}
+
+.preview-card small {
+    display: block;
+    color: #78909c;
+    margin-bottom: 5px;
+}
+
+.preview-card strong {
+    font-size: 20px;
+    color: #37474f;
+}
+
+.chart {
+    height: 180px;
+    margin-top: 25px;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    padding: 20px;
+    background: #fafcf9;
+    border-radius: 15px;
+}
+
+.bar {
+    width: 38px;
+    background: #8aa88a;
+    border-radius: 7px 7px 0 0;
+}
+
+.bar1 {
+    height: 50px;
+}
+
+.bar2 {
+    height: 90px;
+}
+
+.bar3 {
+    height: 70px;
+}
+
+.bar4 {
+    height: 120px;
+}
+
+.bar5 {
+    height: 100px;
+}
+
+.bar6 {
+    height: 145px;
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.features {
+    padding: 100px 7%;
+    text-align: center;
+    background: white;
+}
+
+.section-label {
+    color: #6b8e6b;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.features h2,
+.about h2,
+.cta h2 {
+    font-size: 40px;
+    color: #263238;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #78909c;
+    margin-bottom: 50px;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.feature-card {
+    padding: 32px 25px;
+    text-align: left;
+    background: #f8faf8;
+    border: 1px solid #e5ebe5;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(38, 50, 56, 0.08);
+    border-color: #b7c8b7;
+}
+
+.feature-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e7efe7;
+    border-radius: 14px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #71838b;
+    font-size: 15px;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about {
+    padding: 100px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    background: #f4f7f3;
+}
+
+.about-content {
+    max-width: 550px;
+}
+
+.about-content p:not(.section-label) {
+    color: #687980;
+    margin-bottom: 18px;
+}
+
+.about-content .primary-btn {
+    margin-top: 10px;
+}
+
+
+/* ================================
+   WORKFLOW BOX
+================================ */
+
+.flow-box {
+    width: 430px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(38, 50, 56, 0.1);
+    text-align: center;
+}
+
+.flow-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #6b8e6b;
+    letter-spacing: 1px;
+}
+
+.flow-step {
+    padding: 13px;
+    border: 1px solid #b7c8b7;
+    border-radius: 8px;
+    background: #f7faf7;
+    font-weight: bold;
+}
+
+.arrow {
+    padding: 7px;
+    color: #6b8e6b;
+    font-size: 20px;
+}
+
+.flow-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.flow-options div {
+    padding: 12px;
+    background: #edf3ed;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+/* ================================
+   CALL TO ACTION
+================================ */
+
+.cta {
+    padding: 90px 20px;
+    text-align: center;
+    background: #6b8e6b;
+    color: white;
+}
+
+.cta .section-label {
+    color: #e5f0e5;
+}
+
+.cta h2 {
+    color: white;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+.cta .primary-btn {
+    background: white;
+    color: #557355;
+}
+
+.cta .primary-btn:hover {
+    background: #f1f5f1;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 35px 7%;
+    background: #263238;
+    color: #b8c3c7;
+    text-align: center;
+}
+
+footer .logo {
+    color: white;
+    margin-bottom: 8px;
+}
+
+footer .logo span {
+    color: #9fbd9f;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 5px;
+}
+
+
+/* ================================
+   MODAL
+================================ */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 30, 25, 0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    width: 480px;
+    max-width: 100%;
+    background: white;
+    padding: 40px;
+    border-radius: 22px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.modal-box h2 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.modal-box p {
+    color: #78909c;
+    margin-bottom: 25px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    color: #78909c;
+    cursor: pointer;
+}
+
+.role-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.role-card {
+    border: 1px solid #dce5dc;
+    background: #f8faf8;
+    padding: 25px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.role-card:hover {
+    border-color: #6b8e6b;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(38, 50, 56, 0.08);
+}
+
+.role-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.role-card strong {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.role-card span {
+    font-size: 12px;
+    color: #78909c;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .dashboard-preview {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .preview-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .features,
+    .about {
+        padding: 70px 5%;
+    }
+
+    .features h2,
+    .about h2,
+    .cta h2 {
+        font-size: 30px;
+    }
+
+    .flow-box {
+        width: 100%;
+    }
+
+    .role-container {
+        grid-template-columns: 1fr;
+    }
+
+}

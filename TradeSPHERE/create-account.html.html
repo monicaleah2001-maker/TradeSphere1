@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account - TradeSphere</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8f7f3, #e8f0e8);
+            padding: 20px;
+        }
+
+        .auth-container {
+            width: 470px;
+            max-width: 100%;
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(38, 50, 56, 0.12);
+        }
+
+        .auth-logo {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .auth-logo a {
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: 800;
+            color: #263238;
+        }
+
+        .auth-logo span {
+            color: #6b8e6b;
+        }
+
+        .auth-title {
+            text-align: center;
+            margin-bottom: 8px;
+            color: #263238;
+        }
+
+        .auth-subtitle {
+            text-align: center;
+            color: #78909c;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #455a64;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d9e2d9;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .form-group input:focus {
+            border-color: #6b8e6b;
+            box-shadow: 0 0 0 3px rgba(107, 142, 107, 0.12);
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-wrapper input {
+            padding-right: 65px;
+        }
+
+        .show-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: transparent;
+            color: #6b8e6b;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .register-submit {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #6b8e6b;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        .register-submit:hover {
+            background: #4f704f;
+        }
+
+        .message {
+            display: none;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .message.error {
+            display: block;
+            background: #fdecec;
+            color: #b33a3a;
+        }
+
+        .message.success {
+            display: block;
+            background: #eaf5ea;
+            color: #4f704f;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 22px;
+            color: #78909c;
+        }
+
+        .login-link a {
+            color: #6b8e6b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        .back-home a {
+            color: #607078;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="auth-logo">
+
+            <a href="index.html">
+                Trade<span>Sphere</span>
+            </a>
+
+        </div>
+
+
+        <h1 class="auth-title">
+            Create Account
+        </h1>
+
+        <p class="auth-subtitle">
+            Register for your TradeSphere account
+        </p>
+
+
+        <div id="message" class="message"></div>
+
+
+        <form id="registerForm">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="password-wrapper">
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="show-password"
+                        onclick="togglePassword('password', this)">
+                        Show
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="confirmPassword">
+                    Confirm Password
+                </label>
+
+                <div class="password-wrapper">
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        minlength="6"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="show-password"
+                        onclick="togglePassword('confirmPassword', this)">
+                        Show
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="register-submit">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+
+        <div class="login-link">
+
+            Already have an account?
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </div>
+
+
+        <div class="back-home">
+
+            <a href="index.html">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function togglePassword(id, button) {
+
+            const input =
+                document.getElementById(id);
+
+            if (input.type === "password") {
+
+                input.type = "text";
+                button.textContent = "Hide";
+
+            } else {
+
+                input.type = "password";
+                button.textContent = "Show";
+
+            }
+
+        }
+
+
+        document
+            .getElementById("registerForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document.getElementById("name")
+                    .value
+                    .trim();
+
+                const email =
+                    document.getElementById("email")
+                    .value
+                    .trim()
+                    .toLowerCase();
+
+                const password =
+                    document.getElementById("password")
+                    .value;
+
+                const confirmPassword =
+                    document.getElementById("confirmPassword")
+                    .value;
+
+                const message =
+                    document.getElementById("message");
+
+
+                if (password !== confirmPassword) {
+
+                    message.className =
+                        "message error";
+
+                    message.textContent =
+                        "Passwords do not match.";
+
+                    return;
+
+                }
+
+
+                if (password.length < 6) {
+
+                    message.className =
+                        "message error";
+
+                    message.textContent =
+                        "Password must be at least 6 characters.";
+
+                    return;
+
+                }
+
+
+                const existingUser =
+                    JSON.parse(
+                        localStorage.getItem("tradesphereUser")
+                    );
+
+
+                if (existingUser &&
+                    existingUser.email === email) {
+
+                    message.className =
+                        "message error";
+
+                    message.textContent =
+                        "This email is already registered.";
+
+                    return;
+
+                }
+
+
+                const user = {
+
+                    name: name,
+                    email: email,
+                    password: password
+
+                };
+
+
+                localStorage.setItem(
+                    "tradesphereUser",
+                    JSON.stringify(user)
+                );
+
+
+                message.className =
+                    "message success";
+
+                message.textContent =
+                    "Account created successfully!";
+
+
+                setTimeout(function() {
+
+                    window.location.href =
+                        "login.html";
+
+                }, 1000);
+
+            });
+
+    </script>
+
+</body>
+
+</html>
